@@ -20275,15 +20275,18 @@
         },
         {
             "code": 486,
-            "name": "Not defined in .xml",
-            "vendorId": 13019,
-            "type": "OctetString",
+            "name": "MIP6-Agent-Info",
+            "vendorId": 0,
+            "type": "Grouped",
             "flags": {
                 "mandatory": true,
                 "protected": false,
-                "mayEncrypt": true,
-                "vendorBit": true
-            }
+                "mayEncrypt": false,
+                "vendorBit": false
+            },
+            "groupedAvps": [
+                "MIP-Home-Agent-Host"
+            ]
         },
         {
             "code": 487,
@@ -20359,14 +20362,14 @@
         },
         {
             "code": 493,
-            "name": "Not defined in .xml",
-            "vendorId": 13019,
+            "name": "Service-Selection",
+            "vendorId": 0,
             "type": "OctetString",
             "flags": {
                 "mandatory": true,
                 "protected": false,
-                "mayEncrypt": true,
-                "vendorBit": true
+                "mayEncrypt": false,
+                "vendorBit": false
             }
         },
         {
@@ -21350,6 +21353,18 @@
             ]
         },
         {
+            "code": 600,
+            "name": "Visited-Network-Identifier",
+            "vendorId": 10415,
+            "type": "OctetString",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            }
+        },
+        {
             "code": 601,
             "name": "Final-Unit-Indication",
             "vendorId": 193,
@@ -21707,6 +21722,57 @@
                 "mayEncrypt": true,
                 "vendorBit": true
             }
+        },
+        {
+            "code": 628,
+            "name": "Supported-Features",
+            "vendorId": 10415,
+            "type": "Grouped",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            },
+            "groupedAvps": [
+                "Vendor-Id",
+                "Feature-List-ID",
+                "Feature-List"
+            ]
+        },
+        {
+            "code": 629,
+            "name": "Feature-List-ID",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            },
+            "groupedAvps": [
+                "Vendor-Id",
+                "Feature-List-ID",
+                "Feature-List"
+            ]
+        },
+        {
+            "code": 630,
+            "name": "Feature-List",
+            "vendorId": 10415,
+            "type": "Integer32",
+            "flags": {
+                "mandatory": false,
+                "protected": false,
+                "mayEncrypt": false,
+                "vendorBit": true
+            },
+            "groupedAvps": [
+                "Vendor-Id",
+                "Feature-List-ID",
+                "Feature-List"
+            ]
         },
         {
             "code": 800,
